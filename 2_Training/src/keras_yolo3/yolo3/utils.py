@@ -54,16 +54,16 @@ def get_random_data(
 ):
     """random preprocessing for real-time data augmentation"""
     
-    #This type of splitting makes sure that it is compatible with spaces in folder names
-    #We split at the first space that is followed by a number
+    # This type of splitting makes sure that it is compatible with spaces in folder names
+    # We split at the first space that is followed by a number
     tmp_split = re.split("( \d)", annotation_line, maxsplit=1)
     if len(tmp_split) > 2:
         line = tmp_split[0], tmp_split[1] + tmp_split[2]
     else:
         line = tmp_split
-    #line[0] contains the filename
+    # line[0] contains the filename
     image = Image.open(line[0])
-    #The rest of the line includes bounding boxes
+    # The rest of the line includes bounding boxes
     line = line[1].split(" ")
     iw, ih = image.size
     h, w = input_shape
