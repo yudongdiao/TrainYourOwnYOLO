@@ -8,8 +8,12 @@ import re
 def make_call_string(arglist):
     result_string = ""
     for arg in arglist:
-        result_string += "".join(["--", arg[0], " ", arg[1], " "])
+        result_string += "".join([*arg, " "])
     return result_string
+
+
+def make_arg(arg):
+    return "".join(['="', arg, '"'])
 
 
 root_folder = os.path.dirname(os.path.abspath(__file__))
@@ -54,19 +58,19 @@ anchors = os.path.join(
 )
 
 arglist = [
-    ["input_path", input_folder],
-    ["classes", classes_file],
-    ["output", output_folder],
-    ["yolo_model", model_weights],
-    ["box_file", result_file],
-    ["anchors", anchors],
-    ["file_types", ".jpg .jpeg .png"],
+    ["--input_path", make_arg(input_folder)],
+    ["--classes", make_arg(classes_file)],
+    ["--output", make_arg(output_folder)],
+    ["--yolo_model", make_arg(model_weights)],
+    ["--box_file", make_arg(result_file)],
+    ["--anchors", make_arg(anchors)],
+    ["--file_types", " .jpg .jpeg .png"],
 ]
 
 call_string = " ".join([sys.executable, detector_script, make_call_string(arglist)])
 
 print("Detecting Cat Faces by calling: \n\n", call_string, "\n")
 start = time.time()
-subprocess.Popen([sys.executable, detector_script, make_call_string(arglist)])
+subprocess.Popen([sys.executable, detector_script, *arglist])
 end = time.time()
 print("Detected Cat Faces in {0:.1f} seconds".format(end - start))
