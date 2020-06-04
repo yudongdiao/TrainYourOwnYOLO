@@ -3,7 +3,7 @@
 /home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export/3.jpg 0,0,0,0,1
 /home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export/4.jpg 0,0,0,0,1
 /home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export/5.jpg 0,0,0,0,1
-/home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/TrainYourOwnYOLO/Data/Source_Images/007/6.jpg 0,0,0,0,1
+/home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export/6.jpg 0,0,0,0,1
 /home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export/7.jpg 0,0,0,0,1
 /home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export/8.jpg 0,0,0,0,1
 /home/ubuntu/TrainYourOwnYOLO/Data/Source_Images/Training_Images/vott-csv-export/9.jpg 0,0,0,0,1
